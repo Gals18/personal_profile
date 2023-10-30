@@ -1,0 +1,243 @@
+body {
+	background-color: rgb(252, 252, 252);
+	margin: 0;
+	flex-direction: column;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header.navbar-container {
+	width: 100%;
+	position: fixed;
+	display: flex;
+	text-align: center;
+	z-index: 10;
+	padding: 10px;
+	background-color: rgb(129, 149, 175);
+	justify-content: space-around;
+}
+
+header.navbar-container h1 {
+	text-shadow: #464343;
+	font-size: large;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.bold {
+	font-weight: bold;
+	font-size: 1px;
+}
+header.navbar-container .nav-list ul {
+	display: flex;
+	font-weight: bold;
+	justify-content: center;
+	gap: 1rem 1rem;
+	list-style-type: none;
+	margin-right: 2.5rem;
+}
+
+header.navbar-container .nav-list ul li a {
+	text-decoration: none;
+	font-size: 16px;
+	color: #ffffff;
+	padding: 0.5rem 1.5rem;
+	border-radius: 999px;
+}
+header.navbar-container .nav-list li:hover a {
+	background-color: #ffffff;
+	color: rgb(7, 7, 7);
+}
+
+/* kode untuk tampilan konten */
+
+main {
+	/* max-width: 1200px; */
+	width: 100%;
+	margin-inline: auto;
+	/* padding: 4rem 4rem; */
+	align-items: center;
+	flex: 1;
+}
+
+main .content {
+	flex: 1;
+	display: flex;
+	width: 90%;
+	align-items: center;
+	padding: 0px 5% 0px 5%;
+	background-color: #0067ed;
+}
+
+.content-image {
+	width: 30%;
+}
+
+.content-description {
+	text-align: end;
+	width: 60%;
+
+	color: rgb(232, 232, 232);
+}
+
+.content-description p {
+	font-weight: 400;
+	font-size: larger;
+}
+main .content .content-image img {
+	margin-top: 50px;
+	transform: translateY(5px);
+	right: 0px;
+	z-index: 0;
+}
+
+.social-media ul {
+	flex: 1;
+	display: flex;
+	justify-content: end;
+	margin-right: 2%;
+	margin-top: 5%;
+	list-style-type: none;
+}
+
+.social-media ul li {
+	margin-left: 20px;
+	width: 30px;
+	height: 2%;
+}
+.social-media ul li a {
+	padding: 10px;
+
+	border: 2px solid #ffffff;
+	border-radius: 100%;
+	transition: 300ms;
+}
+
+.social-media ul li a i {
+	color: white;
+	width: 60%;
+	/* height: 10px; */
+}
+
+.social-media ul li a:hover {
+	background-color: rgb(0, 0, 117);
+	color: black;
+}
+
+article {
+	padding: 3%;
+	margin: 2%;
+	width: 70%;
+	height: 30%;
+	background-color: white;
+	border-radius: 2%;
+	box-shadow: 0px 10px 10px 10px rgba(0, 0, 255, 0.2);
+}
+.details {
+	display: flex;
+	flex-direction: row;
+}
+aside {
+	padding: 1%;
+	width: 30%;
+	background-color: rgb(255, 255, 255);
+	margin-right: 10px;
+	margin-bottom: 30px;
+	border-radius: 2%;
+	/* box-shadow: 0px 10px 10px 10px rgba(0, 0, 255, 0.2); */
+}
+
+aside .konten{
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	/* box-shadow: 0px 10px 10px 10px rgba(56, 56, 57, 0.2); */
+	border-radius: 4%;
+	box-shadow: 0px 10px 10px 10px rgba(190, 190, 193, 0.2);
+}
+
+
+
+.konten h3{
+	margin-top: 30px;
+	padding-left: 15px;
+	color: #170f89;
+}
+
+/* aside h3 {
+	margin-top: 2px;
+	padding: 15px;
+	
+} */
+aside p{
+	margin-left: 20px;
+}
+
+/* footer */
+
+footer {
+	padding: 5%;
+	background-color: rgb(29, 29, 29);
+	color: white;
+}
+@media screen and (max-width: 768px) {
+	.content-description {
+		padding-bottom: 10%;
+	}
+	.social-media {
+		margin-top: 10%;
+	}
+	header.navbar-container {
+		flex-direction: column;
+	}
+
+	header.navbar-container .nav-list ul {
+		flex-wrap: wrap;
+		column-gap: 0.5rem;
+	}
+	main .content {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	main .content .content-image img {
+		width: 200px;
+		padding-top: 80px;
+		height: 300px;
+		align-items: flex-start;
+	}
+
+	main .content .content-description .title {
+		font-size: 3rem;
+	}
+
+	main .content .content-description p {
+		font-size: 1rem;
+	}
+
+	main .content .content-image {
+		order: -1;
+	}
+	main .details {
+		flex-direction: column;
+	}
+
+	main .details article {
+		padding: 3%;
+		margin: 2%;
+		width: 90%;
+		height: 30%;
+		background-color: white;
+		border-radius: 1%;
+		box-shadow: 0px 10px 10px 10px rgba(0, 0, 255, 0.2);
+	}
+
+	main .details aside {
+		padding: 3%;
+		margin: 2%;
+		width: 90%;
+		height: 30%;
+		background-color: white;
+		border-radius: 2%;
+		box-shadow: 0px 10px 10px 10px rgba(0, 0, 255, 0.2);
+	}
+}
